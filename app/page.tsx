@@ -213,12 +213,13 @@ export default function Home() {
           <div className="lg:col-span-5">
             <div className="rounded-3xl border border-neutral-800 bg-neutral-900/30 p-6">
               <div className="mb-5 flex items-center gap-3">
-                <div className="relative h-12 w-12 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950">
+                <div className="relative h-12 w-12 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/60 ring-1 ring-emerald-500/15">
                   <Image
                     src="/icon.png"
                     alt="Smoooth icon"
+                    loading="eager"
                     fill
-                    className="object-contain p-2"
+                    className="object-contain p-2 brightness-125 contrast-125"
                     priority
                   />
                 </div>
