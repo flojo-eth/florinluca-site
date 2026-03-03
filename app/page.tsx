@@ -1,3 +1,4 @@
+import Image from "next/image";
 const contactEmail = "contact@florinluca.ro";
 
 const services = [
@@ -211,6 +212,20 @@ export default function Home() {
 
           <div className="lg:col-span-5">
             <div className="rounded-3xl border border-neutral-800 bg-neutral-900/30 p-6">
+              <div className="mb-5 flex items-center gap-3">
+                <div className="relative h-12 w-12 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-950">
+                  <Image
+                    src="/icon.png"
+                    alt="Smoooth icon"
+                    fill
+                    className="object-contain p-2"
+                    priority
+                  />
+                </div>
+                <div className="text-xs uppercase tracking-widest text-neutral-500">
+                  Smoooth SRL
+                </div>
+              </div>
               <div className="text-sm font-medium text-neutral-200">Pentru cine e potrivit</div>
               <p className="mt-2 text-sm leading-relaxed text-neutral-300">
                 Proprietari de pensiuni / vile turistice care vor operare profesionistă, poziționare
