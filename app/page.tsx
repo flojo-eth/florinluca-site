@@ -75,22 +75,22 @@ const differentiators = [
 
 const collaborationModel = [
   {
-    title: "Model flexibil",
-    desc: "Fix lunar / fix + bonus pe performanță (ocupare, ADR, venituri auxiliare) — în funcție de locație și obiective.",
+    title: "Claritate și organizare",
+    desc: "Punem la punct procesele zilnice: rezervări, comunicare, roluri și responsabilități clare.",
   },
   {
-    title: "Pilot (validare)",
-    desc: "Începem cu 30–60 zile de pilot: audit, setup, primele optimizări și un raport cu concluzii + plan 90 zile.",
+    title: "Creștere venituri",
+    desc: "Optimizăm tarifele, pachetele și modul în care vin și sunt gestionați clienții.",
   },
   {
-    title: "Transparență",
-    desc: "Raportare periodică pe indicatori (ocupare, venit/segment, recenzii, costuri cheie) și plan de acțiune.",
+    title: "Transparență totală",
+    desc: "Stabilim câțiva indicatori simpli și urmărim constant progresul, cu raportare clară.",
   },
 ];
 
 const validationKpis = [
   { label: "Grad ocupare", hint: "baseline → țintă (sezonal)" },
-  { label: "ADR / RevPAR", hint: "optimizare tarif + mix" },
+  { label: "Tarif mediu pe cameră", hint: "optimizare preț și pachete"},
   { label: "Scor recenzii", hint: "Booking/Google" },
   { label: "Timp răspuns", hint: "mesaje/cereri" },
   { label: "Venituri auxiliare", hint: "bar/meniuri/pachete" },
@@ -156,10 +156,9 @@ export default function Home() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-300">
-              Smoooth SRL preia operarea unei locații turistice într-un mod modern și predictibil:
-              procese standardizate, digitalizare, comunicare impecabilă și livrare premium
-              pentru leisure și corporate. Site-ul acesta funcționează și ca „one‑pager” pentru
-              validare și prezentare (inclusiv pentru aplicații de finanțare).
+              Smoooth SRL preia operarea unei locații turistice într-un mod simplu și organizat:
+              punem lucrurile în ordine, clarificăm responsabilitățile, îmbunătățim comunicarea
+              cu oaspeții și creștem veniturile într-un mod predictibil.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -229,9 +228,11 @@ export default function Home() {
               </div>
               <div className="text-sm font-medium text-neutral-200">Pentru cine e potrivit</div>
               <p className="mt-2 text-sm leading-relaxed text-neutral-300">
-                Proprietari de pensiuni / vile turistice care vor operare profesionistă, poziționare
-                premium și o experiență coerentă. Ne potrivim cel mai bine pentru locații mici‑medii
-                care vor să crească predictibil și să fie „corporate‑ready”.
+                Proprietari de pensiuni / vile turistice care vor mai multă ordine,
+                mai mult control și o experiență mai bună pentru oaspeți.
+                Lucrăm cu locații care organizează weekend-uri la munte,
+                evenimente private (cununii, botezuri, aniversări), retreat-uri
+                sau grupuri – și care vor să crească fără haos.
               </p>
 
               <div className="mt-5 space-y-3">
@@ -288,8 +289,8 @@ export default function Home() {
           <div className="flex flex-col gap-3">
             <h2 className="text-2xl font-semibold tracking-tight">Model de colaborare</h2>
             <p className="max-w-2xl text-neutral-300">
-              Structură clară, cu variantă de pilot pentru validare rapidă. Detaliile depind de capacitate,
-              sezon și obiective.
+              Colaborarea se bazează pe 3 lucruri simple: ordine, creștere și transparență.
+              Discutăm deschis obiectivele și stabilim un mod de lucru potrivit pentru locația ta.
             </p>
           </div>
 
