@@ -376,7 +376,7 @@ export default function Home() {
               Vrei să vezi dacă se potrivește pentru locația ta?
             </h3>
             <p className="mt-3 max-w-2xl text-neutral-300">
-              Trimite un mesaj scurt și îți răspund cu următorii pași (ce informații avem nevoie și
+              Trimitee un mesaj scurt și îți răspund cu următorii pași (ce informații avem nevoie și
               cum ar arăta o colaborare).
             </p>
 
