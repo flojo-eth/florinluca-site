@@ -11,8 +11,8 @@ const services = [
     desc: "Structură de funnel + execuție: website, conținut, SEO, ads, mesaje și follow-up.",
   },
   {
-    title: "Corporate-ready",
-    desc: "Pachete și livrare pentru retreat-uri, grupuri și evenimente cu standarde clare.",
+    title: "Evenimente & grupuri",
+    desc: "Pachete și livrare simplificată pentru grupuri, evenimente private și sejururi.",
   },
   {
     title: "Digitalizare & standardizare",
@@ -47,11 +47,11 @@ const processSteps = [
 ];
 
 const outcomes = [
-  "Proces clar, fără improvizații",
-  "Comunicare consistentă cu oaspeții",
-  "Livrare mai bună pentru corporate",
-  "Standard premium, repetabil",
-  "Eficiență operațională prin digitalizare",
+  "Proces simplu, fără improvizații",
+  "Comunicare profesionistă cu oaspeții",
+  "Mai mulți clienți și rezervări",
+  "Experiență consecventă pentru oaspeți",
+  "Control operațional și claritate",
 ];
 
 const differentiators = [
@@ -89,30 +89,30 @@ const collaborationModel = [
 ];
 
 const validationKpis = [
-  { label: "Grad ocupare", hint: "baseline → țintă (sezonal)" },
-  { label: "Tarif mediu pe cameră", hint: "optimizare preț și pachete"},
-  { label: "Scor recenzii", hint: "Booking/Google" },
-  { label: "Timp răspuns", hint: "mesaje/cereri" },
-  { label: "Venituri auxiliare", hint: "bar/meniuri/pachete" },
-  { label: "Corporate pipeline", hint: "leaduri/cereri" },
+  { label: "Grad de ocupare", hint: "de la azi → țintă (în funcție de sezon)" },
+  { label: "Tarif mediu pe cameră", hint: "prețuri + pachete mai bune" },
+  { label: "Scor mediu recenzii", hint: "Booking / Google" },
+  { label: "Timp de răspuns", hint: "mesaje / cereri" },
+  { label: "Venituri din bar & pachete", hint: "upsell simplu" },
+  { label: "Cereri & rezervări", hint: "leaduri / cereri" },
 ];
 
 const faqs = [
   {
     q: "Lucrați doar cu pensiuni?",
-    a: "Ne potrivim cel mai bine pentru pensiuni/vile turistice și locații mici-medii care vor standard premium și livrare bună pentru leisure + corporate.",
+    a: "Lucrăm cu pensiuni, vile sau locații turistice de toate dimensiunile. Ne potrivim cu proprietari care vor ordine în operațiuni, comunicare clară cu oaspeții și rezultate măsurabile.",
   },
   {
     q: "Cât durează până se văd rezultate?",
-    a: "De obicei: (1) claritate operațională imediat prin rutine + roluri, (2) îmbunătățiri vizibile în 30–60 zile, (3) optimizare consistentă în 90+ zile (în funcție de sezon).",
+    a: "De obicei: (1) în primele 30 de zile: ordine în procese și comunicare, (2) 30–60 zile: rezultate vizibile în rezervări și feedback, (3) 60–90+ zile: ritm predictibil și control operațional mai bun.",
   },
   {
     q: "Ce informații ai nevoie ca să evaluăm o colaborare?",
-    a: "Locație, capacitate, status operare, canale de vânzare, obiectiv (leisure/corporate), sezonalitate, echipă/furnizori și acces la date de bază (ocupare, tarife, recenzii).",
+    a: "Avem nevoie de: locație, capacitate, canale de vânzare folosite și rapoarte recente de ocupare și tarife — ca să facem o evaluare corectă.",
   },
   {
     q: "Oferiți și partea de marketing?",
-    a: "Da, dar doar legat de operare și vânzare: website/SEO, conținut, ads, mesaje și follow-up — ca un sistem coerent, nu acțiuni izolate.",
+    a: "Da. Facem marketing orientat spre rezultate: website eficient, conținut relevant, anunțuri și follow-up — toate integrate în operațiuni.",
   },
 ];
 
@@ -156,9 +156,10 @@ export default function Home() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-300">
-              Smoooth SRL preia operarea unei locații turistice într-un mod simplu și organizat:
-              punem lucrurile în ordine, clarificăm responsabilitățile, îmbunătățim comunicarea
-              cu oaspeții și creștem veniturile într-un mod predictibil.
+              Smoooth SRL te ajută să operezi pensiunea fără stres și cu rezultate vizibile:
+              ne ocupăm de organizarea zilnică, clarificăm responsabilitățile,
+              comunicăm profesionist cu oaspeții și lucrăm ca tu să câștigi mai bine din
+              locația ta, zi de zi.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -180,7 +181,7 @@ export default function Home() {
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               <div className="rounded-2xl border border-neutral-800 bg-neutral-900/35 p-5">
                 <div className="text-xs text-neutral-400">Focus</div>
-                <div className="mt-2 text-sm text-neutral-200">Premium leisure + corporate</div>
+                <div className="mt-2 text-sm text-neutral-200">Turiști, grupuri & evenimente</div>
               </div>
               <div className="rounded-2xl border border-neutral-800 bg-neutral-900/35 p-5">
                 <div className="text-xs text-neutral-400">Stil</div>
@@ -228,11 +229,14 @@ export default function Home() {
               </div>
               <div className="text-sm font-medium text-neutral-200">Pentru cine e potrivit</div>
               <p className="mt-2 text-sm leading-relaxed text-neutral-300">
-                Proprietari de pensiuni / vile turistice care vor mai multă ordine,
-                mai mult control și o experiență mai bună pentru oaspeți.
-                Lucrăm cu locații care organizează weekend-uri la munte,
-                evenimente private (cununii, botezuri, aniversări), retreat-uri
-                sau grupuri – și care vor să crească fără haos.
+                Proprietari de pensiuni și vile turistice care vor:
+                claritate în operațiuni,
+                mai mult control,
+                comunicare profesionistă cu oaspeții
+                și venituri mai bune — fără haos și fără bătăi de cap.
+                Lucrăm bine cu locații care au turiști individuali,
+                evenimente private (cununii, botezuri, aniversări),
+                weekend-uri sau grupuri.
               </p>
 
               <div className="mt-5 space-y-3">
@@ -290,7 +294,7 @@ export default function Home() {
             <h2 className="text-2xl font-semibold tracking-tight">Model de colaborare</h2>
             <p className="max-w-2xl text-neutral-300">
               Colaborarea se bazează pe 3 lucruri simple: ordine, creștere și transparență.
-              Discutăm deschis obiectivele și stabilim un mod de lucru potrivit pentru locația ta.
+              Înțelegem obiectivele tale și stabilim un mod de lucru potrivit pentru locația ta.
             </p>
           </div>
 
@@ -376,7 +380,7 @@ export default function Home() {
               Vrei să vezi dacă se potrivește pentru locația ta?
             </h3>
             <p className="mt-3 max-w-2xl text-neutral-300">
-              Trimitee un mesaj scurt și îți răspund cu următorii pași (ce informații avem nevoie și
+              Trimite un mesaj scurt și îți răspund cu următorii pași (ce informații avem nevoie și
               cum ar arăta o colaborare).
             </p>
 
@@ -396,7 +400,8 @@ export default function Home() {
             </div>
 
             <p className="mt-4 text-xs text-neutral-500">
-              Notă: acesta este un teaser. Oferta completă și materialele detaliate se trimit la cerere.
+              Trimite un mesaj scurt și îți explicăm pașii următori:
+              ce informații avem nevoie și cum poate începe colaborarea.
             </p>
           </div>
         </section>
