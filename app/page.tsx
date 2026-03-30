@@ -131,7 +131,7 @@ export default function Home() {
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-900/40 px-3 py-1 text-xs text-neutral-300">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            Smoooth SRL — operare pensiuni
+            Smoooth — operare pensiuni
           </div>
 
           <div className="flex items-center gap-2 text-xs text-neutral-400">
@@ -156,7 +156,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-neutral-300">
-              Smoooth SRL te ajută să operezi pensiunea fără stres și cu rezultate vizibile:
+              Smoooth te ajută să operezi pensiunea fără stres și cu rezultate vizibile:
               ne ocupăm de organizarea zilnică, clarificăm responsabilitățile,
               comunicăm profesionist cu oaspeții și lucrăm ca tu să câștigi mai bine din
               locația ta, zi de zi.
@@ -224,7 +224,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="text-xs uppercase tracking-widest text-neutral-500">
-                  Smoooth SRL
+                  Smoooth
                 </div>
               </div>
               <div className="text-sm font-medium text-neutral-200">Pentru cine e potrivit</div>
@@ -407,7 +407,7 @@ export default function Home() {
         </section>
 
         <footer className="mt-14 border-t border-neutral-900 pt-8 text-xs text-neutral-500">
-          © {new Date().getFullYear()} Smoooth SRL — operare & administrare pensiuni
+          © {new Date().getFullYear()} Smoooth — operare & administrare pensiuni
         </footer>
       </div>
     </main>

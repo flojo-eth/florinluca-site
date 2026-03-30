@@ -15,15 +15,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://florinluca.ro"),
   title: {
-    default: "Smoooth SRL — Operare & administrare pensiuni",
-    template: "%s | Smoooth SRL",
+    default: "Smoooth — Operare & administrare pensiuni",
+    template: "%s | Smoooth",
   },
   description:
-    "Smoooth SRL operează și administrează pensiuni/vile turistice: standardizare, digitalizare, livrare premium pentru leisure și corporate. Pilot 30–60 zile + KPI clari.",
-  applicationName: "Smoooth SRL",
-  authors: [{ name: "Smoooth SRL" }],
-  creator: "Smoooth SRL",
-  publisher: "Smoooth SRL",
+    "Smoooth operează și administrează pensiuni/vile turistice: standardizare, digitalizare, livrare premium pentru leisure și corporate. Pilot 30–60 zile + KPI clari.",
+  applicationName: "Smoooth",
+  authors: [{ name: "Smoooth" }],
+  creator: "Smoooth",
+  publisher: "Smoooth",
   alternates: {
     canonical: "/",
   },
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ro_RO",
     url: "https://florinluca.ro/",
-    siteName: "Smoooth SRL",
-    title: "Smoooth SRL — Operare & administrare pensiuni",
+    siteName: "Smoooth",
+    title: "Smoooth — Operare & administrare pensiuni",
     description:
       "Operare modernă pentru locații turistice: procese, digitalizare, experiență premium și creștere măsurabilă. Pilot 30–60 zile + KPI clari.",
     images: [
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Smoooth SRL — operare & administrare pensiuni",
+        alt: "Smoooth — operare & administrare pensiuni",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Smoooth SRL — Operare & administrare pensiuni",
+    title: "Smoooth — Operare & administrare pensiuni",
     description:
       "Operare modernă pentru locații turistice: procese, digitalizare, experiență premium și creștere măsurabilă.",
     images: ["/og.png"],
