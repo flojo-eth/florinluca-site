@@ -1,74 +1,76 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Hanken_Grotesk } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_DESCRIPTION,
+  INDEXABLE,
+  GTM_ID,
+} from "@/lib/site";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Headings (serif) + body (sans), exposed as CSS variables for the Tailwind theme.
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const hanken = Hanken_Grotesk({
+  variable: "--font-hanken",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://florinluca.ro"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Smoooth — Operare & administrare pensiuni",
-    template: "%s | Smoooth",
+    default: `${SITE_NAME} — ${SITE_TAGLINE} în Valea Avrigului`,
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Smoooth operează și administrează pensiuni/vile turistice: standardizare, digitalizare, livrare premium pentru leisure și corporate. Pilot 30–60 zile + KPI clari.",
-  applicationName: "Smoooth",
-  authors: [{ name: "Smoooth" }],
-  creator: "Smoooth",
-  publisher: "Smoooth",
-  alternates: {
-    canonical: "/",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
-  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  alternates: { canonical: "/" },
+  // Staging is noindex (INDEXABLE === false). Flip INDEXABLE in lib/site.ts at
+  // migration to pensiunea-amonte.ro to allow indexing.
+  robots: INDEXABLE
+    ? {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+          "max-video-preview": -1,
+        },
+      }
+    : { index: false, follow: false },
   openGraph: {
     type: "website",
     locale: "ro_RO",
-    url: "https://florinluca.ro/",
-    siteName: "Smoooth",
-    title: "Smoooth — Operare & administrare pensiuni",
-    description:
-      "Operare modernă pentru locații turistice: procese, digitalizare, experiență premium și creștere măsurabilă. Pilot 30–60 zile + KPI clari.",
+    url: "/",
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} — ${SITE_TAGLINE} în Valea Avrigului`,
+    description: SITE_DESCRIPTION,
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Smoooth — operare & administrare pensiuni",
+        alt: `${SITE_NAME} — ${SITE_TAGLINE}`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Smoooth — Operare & administrare pensiuni",
-    description:
-      "Operare modernă pentru locații turistice: procese, digitalizare, experiență premium și creștere măsurabilă.",
+    title: `${SITE_NAME} — ${SITE_TAGLINE} în Valea Avrigului`,
+    description: SITE_DESCRIPTION,
     images: ["/og.png"],
-  },
-  icons: {
-    icon: [
-      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
-      { url: "/favicon.ico" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" }],
   },
 };
 
@@ -79,9 +81,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ro">
+      <head>
+        {/* Google Tag Manager — GA4 (G-KX3GQHYHF6) is delivered through GTM.
+            Active on staging so whatsapp_click can be verified in GTM Preview. */}
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`}
+        </Script>
+      </head>
       <body
-        className={`bg-neutral-950 text-neutral-50 ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${cormorant.variable} ${hanken.variable} antialiased`}
       >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         {children}
       </body>
     </html>
