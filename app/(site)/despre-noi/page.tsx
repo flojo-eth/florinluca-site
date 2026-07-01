@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
+import PlaceholderImage from "@/components/PlaceholderImage";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { STATS, CONTACT, WEBSITE, CHECK_IN, CHECK_OUT } from "@/lib/content";
+import { STATS, CONTACT, WEBSITE, CHECK_IN, CHECK_OUT, HOSTS, CANCELLATION } from "@/lib/content";
 import { SHOW_FB_AND_EVENTS } from "@/lib/site";
 import { btnTerracotta, btnOutlineLight } from "@/lib/ui";
 
@@ -52,6 +53,7 @@ const FAQ_BASE = [
     q: "Cum rezerv?",
     a: "Direct, pe WhatsApp la +40 747 342 280.",
   },
+  ...CANCELLATION.faqs,
 ];
 
 // F&B questions - visible when SHOW_FB_AND_EVENTS = true (see lib/site.ts).
@@ -242,6 +244,29 @@ export default function DesprePage() {
         </div>
       </section>
 
+      {/* ── GAZDELE ── */}
+      <section className={`${container} ${pad}`}>
+        <div className="flex flex-wrap gap-[clamp(36px,5vw,72px)] items-center">
+          <div className="flex-1 basis-[380px]">
+            <SectionHeading eyebrow={HOSTS.eyebrow} title={HOSTS.title} />
+            <div className="mt-6 space-y-4">
+              {HOSTS.body.map((paragraph, index) => (
+                <p key={index} className="text-[17px] leading-relaxed text-muted m-0">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+          <div className="flex-1 basis-[360px]">
+            <PlaceholderImage
+              label="[ echipa Amonte ]"
+              className="aspect-[4/3] rounded-xl"
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ── CUM ARATĂ UN SEJUR ── */}
       <section className={`${container} ${pad}`}>
         <div className="max-w-[780px]">
@@ -379,25 +404,6 @@ export default function DesprePage() {
               [ HARTĂ - embed Google Maps ]
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ── GAZDELE ── */}
-      <section className={`${container} ${pad}`}>
-        <SectionHeading eyebrow="Gazdele voastre" title="Bruno, Florin & Adi" />
-        <div className="mt-6 max-w-[680px]">
-          <p className="text-[17px] leading-relaxed text-muted">
-            După o perioadă petrecută în Germania, ne-am întors acasă cu o
-            dorință simplă: să creăm un loc cu ospitalitate adevărată,
-            omenească. Cu peste 10 ani de experiență în domeniu, Amonte a venit
-            firesc - felul nostru de a primi oaspeții așa cum ne-ar plăcea și
-            nouă să fim primiți.
-          </p>
-          <p className="mt-4 text-[17px] leading-relaxed text-muted">
-            Și mai e{" "}
-            <strong className="font-semibold text-forest">Bruno</strong>,
-            Bernese Mountain Dog-ul care crede că pensiunea e a lui.
-          </p>
         </div>
       </section>
 

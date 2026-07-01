@@ -321,3 +321,75 @@ export const NAV_LINKS = [
   { href: "/activitati-in-zona", label: "Împrejurimi" },
   { href: "/servicii", label: "Servicii" },
 ] as const;
+
+export type Audience = {
+  title: string;
+  tagline: string;
+  body: string;
+  highlights: string[];
+  ctaLabel: string;
+  ctaHref: string;
+};
+
+export const AUDIENCES: Audience[] = [
+  {
+    title: "Escapadă în doi",
+    tagline: "Liniște, priveliște și timp doar pentru voi",
+    body: "Camere cu balcon privat și vedere la munte, jacuzzi și saună, seri lângă șemineu. Locul unde încetiniți amândoi, departe de zgomot.",
+    highlights: ["Cameră cu vedere la munte", "Jacuzzi & saună", "Living cu șemineu"],
+    ctaLabel: "Vezi camerele",
+    ctaHref: "/camere/camera-dubla-vedere-munte",
+  },
+  {
+    title: "Vacanță în familie",
+    tagline: "Spațiu, natură și liniște pentru toată familia",
+    body: "Studiouri spațioase, curte sigură și activități la câțiva pași - ferma de cerbi, Brambura Park, plimbări prin natură. O oază de liniște unde vii cu copiii și te relaxezi cu adevărat.",
+    highlights: ["Studiouri de familie", "Activități pentru copii în zonă", "Curte & natură"],
+    ctaLabel: "Vezi activitățile",
+    ctaHref: "/activitati-in-zona",
+  },
+  {
+    title: "Grup sau echipă",
+    tagline: "Rezervi toată pensiunea - un loc doar al vostru",
+    body: "Amonte se poate închiria integral, pentru până la 24 de persoane, cu sală dedicată pentru grupuri. Ideal pentru teambuilding, retreaturi sau ieșiri cu prietenii - natură, spa și confort, fără să împărțiți spațiul cu nimeni.",
+    highlights: ["Închiriere integrală (până la 24 pers.)", "Sală pentru grupuri", "Spa & terasă"],
+    ctaLabel: "Cere ofertă pentru grup",
+    ctaHref: "whatsapp",
+  },
+];
+
+export const HOSTS = {
+  eyebrow: "Gazdele Amonte",
+  title: "Oameni, nu doar o pensiune",
+  body: [
+    "La Amonte, diferența o fac oamenii. Suntem o echipă tânără, implicată, care ține la fiecare detaliu - de la camere impecabile la o cafea bună dimineața. Ne place să fim aproape de oaspeți și să ne asigurăm că nu le lipsește nimic pe tot parcursul șederii.",
+    "Ne vei găsi mereu la îndemână pentru o recomandare de traseu, un pont despre zonă sau pur și simplu o poveste seara, lângă foc. Iar Bruno, ciobănescul nostru de Berna, e mereu primul care întâmpină oaspeții.",
+  ],
+} as const;
+
+export const CANCELLATION = {
+  eyebrow: "Politica de anulare",
+  promiseTitle: "Rezervarea ta confirmată este garantată.",
+  promiseSub: "O rezervare confirmată la Amonte nu se anulează niciodată din partea noastră. Locul tău rămâne al tău.",
+  details: [
+    "Rezervarea se confirmă printr-un avans de 30% (sau o sumă stabilită de comun acord).",
+    "Anulare cu cel puțin 7 zile înainte de sosire: avansul se restituie integral.",
+    "Anulare cu mai puțin de 7 zile înainte de sosire: avansul se reține.",
+    "Neprezentare (no-show): se reține avansul.",
+    "Pentru închirierea integrală a pensiunii (grupuri), termenul de anulare gratuită este de 28 zile înainte de sosire, având în vedere rezervarea întregului spațiu.",
+    "Modificarea datelor este posibilă în funcție de disponibilitate - scrie-ne pe WhatsApp și găsim o soluție.",
+  ],
+  note: "Politica se aplică rezervărilor directe (WhatsApp, telefon, site). Rezervările făcute prin Booking.com sau Airbnb respectă politica platformei respective.",
+  faqs: [
+    {
+      q: "Care este politica de anulare?",
+      a: "O rezervare confirmată este garantată din partea noastră. Pentru anulări efectuate cu cel puțin 7 zile înainte de sosire (sau 28 de zile în cazul grupurilor care închiriază integral), avansul de 30% se restituie integral. Sub acest termen, avansul se reține. Politica se aplică exclusiv rezervărilor directe (WhatsApp, telefon, site).",
+    },
+    {
+      q: "Îmi pot modifica rezervarea?",
+      a: "Da, în funcție de disponibilitate. Scrie-ne pe WhatsApp și găsim împreună o soluție.",
+    },
+  ],
+} as const;
+
+

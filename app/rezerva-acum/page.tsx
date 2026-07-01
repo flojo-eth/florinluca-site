@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { CONTACT, GOOGLE_FORM_URL } from "@/lib/content";
+import { CONTACT, GOOGLE_FORM_URL, CANCELLATION } from "@/lib/content";
 import { btnTerracotta } from "@/lib/ui";
 
 export const metadata: Metadata = {
@@ -69,6 +69,32 @@ export default function RezervaAcumPage() {
             Jacuzzi & saună inclus
           </span>
         </p>
+
+        {/* Politica de anulare */}
+        <div className="mt-9 rounded-xl border border-line bg-card p-[clamp(20px,4vw,32px)]">
+          <span className="text-xs font-semibold uppercase tracking-[1px] text-terracotta">
+            {CANCELLATION.eyebrow}
+          </span>
+          <div className="mt-4 rounded-lg bg-pine/5 p-[clamp(16px,3vw,22px)] border-l-4 border-forest">
+            <h3 className="m-0 font-serif text-[clamp(18px,2.5vw,22px)] font-bold text-pine leading-snug">
+              {CANCELLATION.promiseTitle}
+            </h3>
+            <p className="mt-1.5 text-[14.5px] leading-relaxed text-muted m-0">
+              {CANCELLATION.promiseSub}
+            </p>
+          </div>
+          <ul className="mt-6 space-y-3.5 pl-0 list-none">
+            {CANCELLATION.details.map((detail, idx) => (
+              <li key={idx} className="flex items-start gap-3 text-[14.5px] leading-relaxed text-[#33392f]">
+                <span className="text-forest mt-1 text-[11px]" aria-hidden="true">✓</span>
+                <span>{detail}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 mb-0 text-[13px] leading-relaxed text-muted-2 italic">
+            {CANCELLATION.note}
+          </p>
+        </div>
 
         {/* Primary conversion */}
         <div className="mt-7 flex flex-col items-start gap-4">
