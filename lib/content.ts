@@ -133,7 +133,7 @@ export const ACTIVITIES: Activity[] = [
     desc: "Trasee montane spre Cabana Bârcaciu, Negoiu și Suru - plecare direct din Valea Avrigului.",
     dist: "în zonă",
     photoLabel: "[ trasee Făgăraș ]",
-    photo: "/trasee-fagaras.jp2",
+    photo: "/trasee-fagaras.jpg",
   },
   {
     name: "Brambura Park",
