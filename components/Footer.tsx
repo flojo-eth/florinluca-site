@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CONTACT, NAV_LINKS, WEBSITE } from "@/lib/content";
 
 export default function Footer() {
@@ -15,6 +16,36 @@ export default function Footer() {
           <p className="mt-[18px] max-w-[36ch] text-sm leading-relaxed">
             Pensiune boutique în Valea Avrigului, la poalele Munților Făgăraș.
           </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href="https://anpc.ro/ce-este-sal/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block hover:opacity-90 transition-opacity"
+            >
+              <Image
+                src="/anpc-sal.svg"
+                alt="Soluționarea Alternativă a Litigiilor"
+                width={250}
+                height={50}
+                className="h-10 w-auto rounded-md"
+              />
+            </a>
+            <a
+              href="https://ec.europa.eu/consumers/odr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block hover:opacity-90 transition-opacity"
+            >
+              <Image
+                src="/anpc-sol.svg"
+                alt="Soluționarea Online a Litigiilor"
+                width={250}
+                height={50}
+                className="h-10 w-auto rounded-md"
+              />
+            </a>
+          </div>
         </div>
 
         <div className="flex flex-wrap gap-[clamp(32px,5vw,72px)]">
