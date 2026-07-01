@@ -4,7 +4,7 @@ import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { STATS, CONTACT, WEBSITE, CHECK_IN, CHECK_OUT, HOSTS, CANCELLATION } from "@/lib/content";
+import { STATS, CONTACT, WEBSITE, CHECK_IN, CHECK_OUT, HOSTS, CANCELLATION, FIRE_SAFETY_AUTH } from "@/lib/content";
 import { SHOW_FB_AND_EVENTS } from "@/lib/site";
 import { btnTerracotta, btnOutlineLight } from "@/lib/ui";
 
@@ -447,6 +447,9 @@ export default function DesprePage() {
               </p>
             </div>
           ))}
+        </div>
+        <div className="mt-12 text-[13px] text-muted-2 leading-relaxed">
+          Pensiunea Amonte deține {FIRE_SAFETY_AUTH.replace("ISU Sibiu nr.", "emisă de ISU Sibiu (nr.") + ")."}
         </div>
       </section>
 

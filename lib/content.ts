@@ -392,4 +392,7 @@ export const CANCELLATION = {
   ],
 } as const;
 
+export const FIRE_SAFETY_AUTH = "Autorizație de Securitate la Incendiu ISU Sibiu nr. 556/25/SU-SB din 24.09.2025";
+
+
 
